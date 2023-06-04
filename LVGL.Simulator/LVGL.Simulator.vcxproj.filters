@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="LVGL.Portable.vcxitems.filters" />
+  <Import Project="LVGL.Drivers.vcxitems.filters" />
+  <ItemGroup>
+    <ClInclude Include="lv_conf.h" />
+    <ClInclude Include="lv_drv_conf.h" />
+    <ClInclude Include="demo\Page.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="lvgl-pm\anima.h">
+      <Filter>lvgl-pm</Filter>
+    </ClInclude>
+    <ClInclude Include="lvgl-pm\pm.h">
+      <Filter>lvgl-pm</Filter>
+    </ClInclude>
+    <ClInclude Include="lvgl-pm\pm_utils.h">
+      <Filter>lvgl-pm</Filter>
+    </ClInclude>
+    <ClInclude Include="lvgl\src\extra\widgets\dclock\lv_dclock.h">
+      <Filter>lvgl\src\extra\widgets\dclock</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="LVGL.Simulator.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Mile.Project.Properties.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LVGL.Simulator.cpp" />
+    <ClCompile Include="lvgl-pm\anima.c">
+      <Filter>lvgl-pm</Filter>
+    </ClCompile>
+    <ClCompile Include="lvgl-pm\pm.c">
+      <Filter>lvgl-pm</Filter>
+    </ClCompile>
+    <ClCompile Include="lvgl-pm\pm_utils.c">
+      <Filter>lvgl-pm</Filter>
+    </ClCompile>
+    <ClCompile Include="lvgl\src\extra\widgets\dclock\lv_dclock.c">
+      <Filter>lvgl\src\extra\widgets\dclock</Filter>
+    </ClCompile>
+    <ClCompile Include="font\NotoSansTC_Regular_16.c">
+      <Filter>font</Filter>
+    </ClCompile>
+    <ClCompile Include="font\NotoSansTC_Regular_34.c">
+      <Filter>font</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\Page_startup.c">
+      <Filter>Demo\Page_startup</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\Page1.c">
+      <Filter>Demo\Page1</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\Page2.c">
+      <Filter>Demo\Page2</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\Page3.c">
+      <Filter>Demo\Page3</Filter>
+    </ClCompile>
+    <ClCompile Include="font\lv_font_montserratMedium_24.c">
+      <Filter>font</Filter>
+    </ClCompile>
+    <ClCompile Include="lvgl-pm\extra\pm_obj_anima.c">
+      <Filter>lvgl-pm\extra</Filter>
+    </ClCompile>
+    <ClCompile Include="lvgl-pm\extra\SLgenerated.c">
+      <Filter>lvgl-pm\extra</Filter>
+    </ClCompile>
+    <ClCompile Include="img\ui_img_page1_arc_png.c">
+      <Filter>Demo\Page1</Filter>
+    </ClCompile>
+    <ClCompile Include="img\ui_img_page1_bg_png.c">
+      <Filter>Demo\Page1</Filter>
+    </ClCompile>
+    <ClCompile Include="img\ui_img_page1_menu_png.c">
+      <Filter>Demo\Page1</Filter>
+    </ClCompile>
+    <ClCompile Include="img\ui_img_a1_png.c">
+      <Filter>Demo\Page1</Filter>
+    </ClCompile>
+    <ClCompile Include="img\ui_img_a2_png.c">
+      <Filter>Demo\Page1</Filter>
+    </ClCompile>
+    <ClCompile Include="img\ui_img_a3_png.c">
+      <Filter>Demo\Page1</Filter>
+    </ClCompile>
+    <ClCompile Include="img\ui_img_powertip001_png.c">
+      <Filter>Demo\Page3</Filter>
+    </ClCompile>
+    <ClCompile Include="img\ui_img_water_001_png.c">
+      <Filter>Demo\Page1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LVGL.Simulator.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="LVGL.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="freetype.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Demo">
+      <UniqueIdentifier>{ebb0414d-73e6-49c9-985b-a63b66218e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lvgl-pm">
+      <UniqueIdentifier>{44b77cb0-97aa-4239-b3c0-104a4c383d5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lvgl\src\extra\widgets\dclock">
+      <UniqueIdentifier>{338f662a-7f8b-448c-abe6-5824343aea09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="font">
+      <UniqueIdentifier>{d54e02c9-a47a-4fc0-9a2d-37d32deded22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lvgl-pm\extra">
+      <UniqueIdentifier>{55738462-4b84-4104-8b9f-a6fa2365eced}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Page_startup">
+      <UniqueIdentifier>{82b32335-9a47-4139-8ebd-df2b7ed4d670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Page1">
+      <UniqueIdentifier>{57912946-2e5b-4497-a8f5-4bcece6d4839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Page2">
+      <UniqueIdentifier>{5d7488cb-adb4-4372-ad80-eb82d3f88107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Page3">
+      <UniqueIdentifier>{7a1c0c48-9566-444f-a15e-cfd4e7b39515}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

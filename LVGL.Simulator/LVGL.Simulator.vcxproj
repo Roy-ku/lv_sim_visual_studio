@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="Mile.Project.Windows.Legacy\Mile.Project.Platform.Win32.props" />
+  <Import Project="Mile.Project.Windows.Legacy\Mile.Project.Platform.x64.props" />
+  <Import Project="Mile.Project.Windows.Legacy\Mile.Project.Platform.ARM64.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}</ProjectGuid>
+    <RootNamespace>LVGL</RootNamespace>
+    <MileProjectType>ConsoleApplication</MileProjectType>
+    <MileProjectManifestFile>LVGL.Simulator.manifest</MileProjectManifestFile>
+    <MileProjectEnableVCLTLSupport>true</MileProjectEnableVCLTLSupport>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)'=='Debug'">
+    <SupportLTL>false</SupportLTL>
+  </PropertyGroup>
+  <Import Project="Mile.Project.Windows.Legacy\Mile.Project.Cpp.props" />
+  <Import Project="freetype.props" />
+  <PropertyGroup>
+    <IncludePath>$(MSBuildThisFileDirectory);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)'=='Release'">MinSpace</Optimization>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Roy\0.Develop\1.Project\Soft\GUI\LVGL\lv_sim_visual_studio_for_GUI\lv_sim_visual_studio\LVGL.Simulator\lvgl\src\extra\libs\bmp;lvgl-pm;lvgl-pm\extra;lvgl\src;lvgl;demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="LVGL.Portable.vcxitems" />
+  <Import Project="LVGL.Drivers.vcxitems" />
+  <ItemGroup>
+    <ClInclude Include="demo\Page.h" />
+    <ClInclude Include="lvgl-pm\anima.h" />
+    <ClInclude Include="lvgl-pm\pm.h" />
+    <ClInclude Include="lvgl-pm\pm_utils.h" />
+    <ClInclude Include="lvgl\src\extra\widgets\dclock\lv_dclock.h" />
+    <ClInclude Include="lv_conf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lv_drv_conf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="LVGL.Simulator.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Mile.Project.Properties.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="demo\Page2.c" />
+    <ClCompile Include="demo\Page1.c" />
+    <ClCompile Include="demo\Page3.c" />
+    <ClCompile Include="demo\Page_startup.c" />
+    <ClCompile Include="font\lv_font_montserratMedium_24.c" />
+    <ClCompile Include="font\NotoSansTC_Regular_16.c" />
+    <ClCompile Include="font\NotoSansTC_Regular_34.c" />
+    <ClCompile Include="img\ui_img_a1_png.c" />
+    <ClCompile Include="img\ui_img_a2_png.c" />
+    <ClCompile Include="img\ui_img_a3_png.c" />
+    <ClCompile Include="img\ui_img_page1_arc_png.c" />
+    <ClCompile Include="img\ui_img_page1_bg_png.c" />
+    <ClCompile Include="img\ui_img_page1_menu_png.c" />
+    <ClCompile Include="img\ui_img_powertip001_png.c" />
+    <ClCompile Include="img\ui_img_water_001_png.c" />
+    <ClCompile Include="lvgl-pm\anima.c" />
+    <ClCompile Include="lvgl-pm\extra\pm_obj_anima.c" />
+    <ClCompile Include="lvgl-pm\extra\SLgenerated.c" />
+    <ClCompile Include="lvgl-pm\pm.c" />
+    <ClCompile Include="lvgl-pm\pm_utils.c" />
+    <ClCompile Include="LVGL.Simulator.cpp" />
+    <ClCompile Include="lvgl\src\extra\widgets\dclock\lv_dclock.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LVGL.Simulator.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="LVGL.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="freetype.props" />
+  </ItemGroup>
+  <Import Project="Mile.Project.Windows.Legacy\Mile.Project.Cpp.targets" />
+</Project>
