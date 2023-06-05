@@ -5,6 +5,29 @@ lv_anim_t PropertyAnimation_0;
 static void page1_btn_1_event_handler(lv_event_t* e);
 static void Style_Set_label_1(lv_obj_t* obj);
 
+
+/********************* Animation *********************/
+void XMove_Animation(lv_obj_t* TargetObject, int delay)
+{
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 5000);
+    lv_anim_set_user_data(&PropertyAnimation_0, TargetObject);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 100);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, LV_ANIM_REPEAT_INFINITE);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_set_get_value_cb(&PropertyAnimation_0, &_ui_anim_callback_get_x);
+    lv_anim_start(&PropertyAnimation_0);
+}
+
+/*****************************************************/
+
 static void Style_Set_label_1(lv_obj_t* obj)
 {
     // Write style state: LV_STATE_DEFAULT for style_page_home_label_1_main_main_default
@@ -211,6 +234,7 @@ void InitPages1(lv_obj_t* page)
     lv_pm_obj_anima_fade_in_out(ui_ImageA2,    0, 1500, 1500,8000, LV_ANIM_REPEAT_INFINITE);
     lv_pm_obj_anima_fade_in_out(ui_ImageA1, 4000, 1500, 1500,8000, LV_ANIM_REPEAT_INFINITE);
     lv_pm_obj_anima_fade_in_out(ui_ImageA3, 8000, 1500, 1500,8000, LV_ANIM_REPEAT_INFINITE);
+    XMove_Animation(ui_Image5, 0);
 }
 
 void DeInitPages1(lv_obj_t* page)
