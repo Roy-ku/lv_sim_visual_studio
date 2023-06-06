@@ -11,10 +11,10 @@ void XMove_Animation(lv_obj_t* TargetObject, int delay)
 {
     lv_anim_t PropertyAnimation_0;
     lv_anim_init(&PropertyAnimation_0);
-    lv_anim_set_time(&PropertyAnimation_0, 5000);
+    lv_anim_set_time(&PropertyAnimation_0, 8000);
     lv_anim_set_user_data(&PropertyAnimation_0, TargetObject);
     lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
-    lv_anim_set_values(&PropertyAnimation_0, 0, 100);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 300);
     lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
     lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
     lv_anim_set_playback_time(&PropertyAnimation_0, 0);
@@ -172,8 +172,8 @@ void InitPages1(lv_obj_t* page)
     lv_img_set_src(ui_Image5, &ui_img_water_001_png);
     lv_obj_set_width(ui_Image5, LV_SIZE_CONTENT);   /// 300
     lv_obj_set_height(ui_Image5, LV_SIZE_CONTENT);    /// 189
-    lv_obj_set_x(ui_Image5, -1);
-    lv_obj_set_y(ui_Image5, 79);
+    lv_obj_set_x(ui_Image5, -173);
+    lv_obj_set_y(ui_Image5, 85);
     lv_obj_set_align(ui_Image5, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_Image5, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
     lv_obj_clear_flag(ui_Image5, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
